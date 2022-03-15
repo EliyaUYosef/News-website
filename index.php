@@ -1,19 +1,3 @@
-<?php
-echo "<pre/>";
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-include_once("Classes/MonolithGetPageData.class.php");
-include_once("Classes/DataRender.class.php");
-
-use Classes\DataRender;
-
-$Data = DataRender::getInstance();
-
-$categories = $Data->getCategories();
-$products = $Data->getProducts();
-
-?>
 <!doctype html>
 <html lang="en">
 
@@ -24,58 +8,59 @@ $products = $Data->getProducts();
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav class="navbar fixed-top navbar-light bg-light px-5">
+    <nav class="navbar absolute-top navbar-light bg-light px-5">
         <a class="navbar-brand" href="#">select action</a>
-        <select name="action" class="form-select" aria-label="Default select example">
-            <option value="Products" selected>Products</option>
-            <option value="Categories">Categories</option>
+        <select id="select_input" name="action" class="form-select" aria-label="Default select example">
+            <option value="none" selected>- select option -</option>
+            <option value="products">Products</option>
+            <option value="categories">Categories</option>
         </select>
     </nav>
 
-    <h1>Hello, world!</h1>
+    <div class="container mt-3">
+        <h1 id='background_text' class='mt-5'> Hi, Please Choose Table ^ </h1>
+        <table class="table" id="products_table" class="">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Attributes</th>
+                    <th scope="col">Categories</th>
+                </tr>
+            </thead>
+            <tbody id='products_table_body'>
+            </tbody>
+        </table>
 
-    <table class="table">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-            </tr>
-        </tbody>
-    </table>
+        <table class="table" id="categories_table" class="">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Product Amount</th>
+                    <th scope="col">Attributes</th>
+                </tr>
+            </thead>
+            <tbody id='categories_table_body'>
+            </tbody>
+        </table>
 
+    </div>
 
+    <script>
+        
+    </script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <script src="script.js"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

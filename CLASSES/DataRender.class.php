@@ -73,7 +73,7 @@ class DataRender
                 'attributes' => $attributes_array
             ];
         }
-        MonolithApiException::debug($categories_array_is_parsed);
+        
         return $categories_array_is_parsed;
     }
 
