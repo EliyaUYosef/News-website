@@ -1,5 +1,5 @@
 <?php
-
+namespace Classes;
 use Classes\MonolithApiException;
 
 include_once("GeneralObject.class.php");

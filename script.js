@@ -8,6 +8,7 @@
         }
 
         function ParseProducts(data_string) {
+            console.log(data_string);
             let obj = JSON.parse(data_string);
             obj.forEach(o => createProductRow(o));
         }
@@ -40,7 +41,9 @@
         function createProductRow(element) {
             document.getElementById("categories_table").style.display = "none";
             document.getElementById("products_table").style.display = "block";
-
+            if (!element.categories) {
+                return;
+            }
             var body_table = document.getElementById("products_table_body");
 
             var row = body_table.insertRow(-1);

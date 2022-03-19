@@ -2,13 +2,13 @@
 
 namespace Classes;
 
-use Attribute;
-use Category;
-use Label;
-use Product;
+// use ProductAttribute;
+// use Category;
+// use Label;
+// use Product;
 
 include_once("MonolithGetPageData.class.php");
-include_once("Attribute.class.php");
+include_once("ProductAttribute.class.php");
 include_once("Label.class.php");
 include_once("Product.class.php");
 include_once("Category.class.php");
@@ -191,7 +191,7 @@ class DataRender
     private function parseLabels($attributes)
     {
         foreach ($attributes as $attribute) {
-            $Attribute = new Attribute($attribute['id'], $attribute['title']);
+            $Attribute = new ProductAttribute($attribute['id'], $attribute['title']);
             $attribute_labels_array = [];
             foreach ($attribute['labels'] as $label) {
                 $attribute_labels_array[] = $label['id'];

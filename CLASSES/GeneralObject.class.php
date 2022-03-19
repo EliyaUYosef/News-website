@@ -1,11 +1,8 @@
 <?php
+namespace Classes;
 
 use Classes\MonolithApiException;
 
-include_once("Attribute.class.php");
-include_once("Label.class.php");
-include_once("Product.class.php");
-include_once("Category.class.php");
 class GeneralObject
 {
     public $id;

@@ -46,7 +46,7 @@ a {
     color: #336b6b;
 }
 
-tr:hover {
+tbody tr:hover {
     background: #336b6b;
     color: #fff;
 }
