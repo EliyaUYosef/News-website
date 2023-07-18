@@ -8,5 +8,5 @@ why this project ?
   -Practicing writing code in JavaScript
 
 Languages :
-  Backend - PHP
-  Frontend - JavaScript
+  - Backend - PHP
+  - Frontend - JavaScript
